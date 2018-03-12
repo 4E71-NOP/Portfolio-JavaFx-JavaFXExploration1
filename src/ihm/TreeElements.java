@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javafxexploration01;
+package ihm;
 
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
@@ -26,9 +26,8 @@ public class TreeElements {
     }
 
     public TreeItem CreationItemFichier(String nom) {
-//      A faire : Trouver des chaine dans le nom pour signifier que le fichier est une image ou non
         if ( nom.matches("(.*)(.jpg|.gif|.jpeg|.png|.tiff|.bmp|.tif)") ) {
-            System.out.println("javafxexploration01.TreeElements.CreationItemFichier(): Fichier Trouvé.");
+            System.out.println("ihm.TreeElements.CreationItemFichier(): Fichier Trouvé.");
             return new TreeItem(nom, new ImageView(iconImage));
         }
         return new TreeItem(nom, new ImageView(iconFichier));
